@@ -49,7 +49,7 @@
         "word_wrap": true
     }
 ## Plugins
-AdvancedNewFile, AutoFileName, Boxy Theme, BracketHighlighter, Color Highlighter, Djaneiro, Emmet, HTML5, Inc-Dec-Value, JavaScript Snippets, Material Theme, Predawn, SideBarEnhancements, SublimeOnSaveBuild, Tomorrow Color Schemes, Anaconda, ColorPicker, Emmet Css Snippets, HTML-CSS-JS Prettify, Minify, Random Everything, Terminal
+AdvancedNewFile, AutoFileName, Boxy Theme, BracketHighlighter, Color Highlighter, Djaneiro, Emmet, HTML5, Inc-Dec-Value, JavaScript Snippets, Material Theme, Predawn, SideBarEnhancements, SublimeOnSaveBuild, Tomorrow Color Schemes, Anaconda, ColorPicker, Emmet Css Snippets, HTML-CSS-JS Prettify, Minify, Random Everything, Terminal, Theme - Brogrammer
 
 ## Minify
     npm install -g clean-css uglifycss js-beautify html-minifier uglify-js minjson svgo stylus jade
