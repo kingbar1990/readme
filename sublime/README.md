@@ -2,7 +2,7 @@
     {
         "auto_complete": true,
         "caret_style": "solid",
-        "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night-Eighties.tmTheme",
+        "color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
         "ensure_newline_at_eof_on_save": true,
         "file_exclude_patterns":
         [
@@ -34,10 +34,6 @@
         ],
         "line_padding_bottom": 0,
         "line_padding_top": 0,
-        "material_theme_accent_red": true,
-        "predawn_findreplace_small": true,
-        "predawn_quick_panel_small": true,
-        "predawn_tabs_small": true,
         "rulers":
         [
             79
