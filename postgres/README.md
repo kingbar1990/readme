@@ -1,5 +1,5 @@
 # Install
-    sudo apt-get install postgresql
+    sudo apt-get install postgresql libpq-dev python-dev python3-dev build-essential postgresql-server-dev-all
 
 # Login to postgres
     sudo -u postgres psql
@@ -12,11 +12,11 @@
 # Django
     DATABASES = {
         'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': <name>,
-        'USER': <login>,
-        'PASSWORD': <password>,
-        'HOST': '', # Set to empty string for localhost.
-        'PORT': '', # Set to empty string for default.
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': <name>,
+            'USER': <login>,
+            'PASSWORD': <password>,
+            'HOST': '', # Set to empty string for localhost.
+            'PORT': '', # Set to empty string for default.
         }
     }
