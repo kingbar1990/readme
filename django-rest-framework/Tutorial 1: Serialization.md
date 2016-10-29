@@ -1,17 +1,15 @@
 # Start app
+    virtualenv env
+    source env/bin/activate
 
-virtualenv env
-source env/bin/activate
+    pip install django
+    pip install djangorestframework
+    pip install pygments
 
-pip install django
-pip install djangorestframework
-pip install pygments
+    django-admin startproject tutorial
+    python manage.py startapp snippets
 
-
-django-admin startproject tutorial
-python manage.py startapp snippets
-
-tutorial/settings.py
+### tutorial/settings.py
 
     INSTALLED_APPS = (
         ...
@@ -21,7 +19,7 @@ tutorial/settings.py
 
 ## Create initial model
 
-snippets/models.py
+### snippets/models.py
 
     from django.db import models
     from pygments.lexers import get_all_lexers
@@ -43,12 +41,13 @@ snippets/models.py
         class Meta:
             ordering = ('created',)
 
-python manage.py makemigrations snippets
-python manage.py migrate
+### Migrations
+    python manage.py makemigrations snippets
+    python manage.py migrate
 
 ## Create Serializer
 
-snippets/serializers.py
+### snippets/serializers.py
 
     from rest_framework import serializers
     from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
@@ -83,7 +82,7 @@ snippets/serializers.py
 
 
 ### Using ModelSerializers
-snippets/serializers.py
+### snippets/serializers.py
 
     class SnippetSerializer(serializers.ModelSerializer):
         class Meta:
@@ -92,7 +91,7 @@ snippets/serializers.py
 
 ## Create View
 
-snippets/views.py
+### snippets/views.py
 
     from django.http import HttpResponse
     from django.views.decorators.csrf import csrf_exempt
@@ -158,7 +157,7 @@ snippets/views.py
 
 ## Set urls
 
-snippets/urls.py
+### snippets/urls.py
 
     from django.conf.urls import url
     from snippets import views
@@ -170,7 +169,7 @@ snippets/urls.py
 
 ## Set general urls
 
-tutorial/urls.py
+### tutorial/urls.py
 
     from django.conf.urls import url, include
 
@@ -180,8 +179,8 @@ tutorial/urls.py
 
 ## Test project
 
-pip install httpie
+    pip install httpie
 
-http http://127.0.0.1:8000/snippets/
-http http://127.0.0.1:8000/snippets/2/
+    http http://127.0.0.1:8000/snippets/
+    http http://127.0.0.1:8000/snippets/2/
 
