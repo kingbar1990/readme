@@ -1,17 +1,24 @@
-# Create the project directory
-    mkdir tutorial
-    cd tutorial
-
+# Create the project directory\
+```bash
+mkdir tutorial
+cd tutorial
+```
 # Create a virtualenv to isolate our package dependencies locally
-    virtualenv env
-    source env/bin/activate  # On Windows use `env\Scripts\activate`
+```bash
+virtualenv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+```
 
 # Install Django and Django REST framework into the virtualenv
-    pip install django
-    pip install djangorestframework
+```bash
+pip install django
+pip install djangorestframework
+```
 
 # Set up a new project with a single application
-    django-admin.py startproject tutorial .  # Note the trailing '.' character
-    cd tutorial
-    django-admin.py startapp quickstart
-    cd ..
+```bash
+django-admin.py startproject tutorial .  # Note the trailing '.' character
+cd tutorial
+django-admin.py startapp quickstart
+cd ..
+```
